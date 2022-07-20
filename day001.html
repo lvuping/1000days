@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #alert-box {
+        background: skyblue;
+        padding: 20px;
+        color: white;
+        border-radius: 5px;
+        display: none;
+      }
+      .black-bg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+        padding: 30px;
+        display: none;
+      }
+      .white-bg {
+        background: white;
+        border-radius: 5px;
+        padding: 30px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- alert with ID -->
+    <div id="alert-box">Alert!</div>
+    <button
+      onclick="document.getElementById('alert-box').style.display = 'block';"
+    >
+      open
+    </button>
+    <button
+      onclick="document.getElementById('alert-box').style.display = 'none';"
+    >
+      Close!
+    </button>
+    <br />
+    <button onclick="알림창열기('block')">function open</button>
+    <button onclick="알림창열기('none')">function close</button>
+
+    <!-- Class -->
+
+    <p class="title1">test1</p>
+    <p class="title1">test2</p>
+    <div class="test1">안녕하세요</div>
+    <div class="test1">안녕하세요</div>
+
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>Modal !!!</h4>
+        <button class="btn btn-danger" id="close">Close</button>
+      </div>
+    </div>
+
+    <button class="open">Open modal</button>
+
+    <script>
+      function 알림창열기(구멍) {
+        document.getElementById("alert-box").style.display = 구멍;
+      }
+
+      document.getElementsByClassName("title1")[0].innerHTML = "Hello";
+      document.querySelectorAll(".test1").innerHTML = "안녕";
+
+      document.querySelector(".open").addEventListener("click", function () {
+        document.querySelector(".black-bg").style.display = "block";
+      });
+      document.querySelector("#close").addEventListener("click", function () {
+        document.querySelector(".black-bg").style.display = "none";
+      });
+    </script>
+  </body>
+</html>
