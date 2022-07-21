@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Fade out | in  -->
+<p class="hello">HEllo</p>
+<button class="test-btn">Fade Out Button</button>
+<button class="test-btn-in">Fade In Button</button>
+<button class="test-btn-toggle">Fade Toggle Button</button>
+
+<br>
+<br>
+<!-- button test -->
+<form action="success.html">
+<div class="my-3">
+    <input type="text" id="email" class="form-control">
+</div>
+<div class="my-3">
+    <input type="password" id="password" class="form-control">
+</div>
+<button type="submit" class="btn btn-primary" id="email">Send</button>
+<button type="button" class="btn btn-danger" id="close">Close</button>
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script>
+
+$('.test-btn').on('click', function(){
+    $('.hello').fadeOut();
+});
+$('.test-btn-in').on('click', function(){
+    $('.hello').fadeIn();
+});
+$('.test-btn-toggle').on('click', function(){
+    $('.hello').fadeToggle();
+});
+
+
+// Jquery 
+
+$('form').on('submit', function(e){
+    if (document.getElementById('email').value == '') {
+        e.preventDefault();
+        alert('Input ID ');
+    }
+    if (document.getElementById('password').value == '') {
+        e.preventDefault();
+        alert('Input PW ');
+    }
+    
+    if (document.getElementById('password').value.length < 6){
+        e.preventDefault();
+        alert('Password is too short');
+    }
+});
+
+</script>
+</body>
+</html>
