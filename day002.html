@@ -27,6 +27,12 @@
 <button type="button" class="btn btn-danger" id="close">Close</button>
 </form>
 
+<br>
+<br>
+<br>
+<!-- Dar mode -->
+<span class="badge bg-dark">Dark ✔</span>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
 <script>
 
@@ -59,6 +65,34 @@ $('form').on('submit', function(e){
     }
 });
 
+document.getElementById('email').addEventListener('input', function(){
+  console.log('안녕 input')
+});
+document.getElementById('email').addEventListener('change', function(){
+  console.log('안녕 change')
+});
+</script>
+<script>
+    // dark mode
+var count = 0;
+document.querySelector('.bg-dark').addEventListener('click', function(){
+    // alert("test")
+    console.log(count)
+    count++; 
+    if (count % 2 == 1){
+        $('.badge').html('Light');
+    }
+    else{
+        $('.badge').html('Dark');
+        }
+});
+
+</script>
+
+<script>
+    setTimeout(function(){
+        alert("Time's up!")
+    }, 3000);
 </script>
 </body>
 </html>
