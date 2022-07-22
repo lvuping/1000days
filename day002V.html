@@ -1,0 +1,40 @@
+<html>
+    <header>
+    <style>
+.slide-container {
+  width: 300vw;
+  transition: all 1s;
+  /* transform: translateX(-100vw); */
+}
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+.slide-box img {
+  width: 100%;
+} 
+    </style>
+    </header>
+    <div>
+<div style="overflow: hidden">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="static/car1.png">
+      </div>
+      <div class="slide-box">
+        <img src="static/car2.png">
+      </div>
+      <div class="slide-box">
+        <img src="static/car3.png">
+      </div>
+    </div>
+ </div> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script>
+$('.slide-box').on('click', function() {
+    $('.slide-container').css('transform', 'translateX(-100vw)');
+});
+</script>
+
+</html>
