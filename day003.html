@@ -5,6 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .navbar {
+        /* position: fixed; */
+        /* z-index: 5; */
+        height: 20vw;
+        width: 100%;
+        background: skyblue;
+        font-size: 250px;
+      }
+      .dummy {
+        height: 1000px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <!-- <div class="navbar">DHSHOP</div> -->
+    <div class="dummy" id="dummy">dummy</div>
+    <div style="width: 200px; height: 100px; overflow-y: scroll">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis nisi
+      est incidunt sed quis ipsam qui ut ipsa, repudiandae vel similique nulla
+      nostrum voluptate iure facilis architecto provident minima labore?
+    </div>
+  </body>
+  <script>
+    window.addEventListener("scroll", function () {
+      var temp = window.scrollY;
+      var fontSizee = temp + "px";
+      console.log(temp);
+      document.querySelector(".dummy").style.border = "solid";
+      document.querySelector(".dummy").style.borderColor = "red";
+      document.querySelector(".dummy").style.fontSize = fontSizee;
+    });
+  </script>
 </html>

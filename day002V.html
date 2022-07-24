@@ -28,12 +28,24 @@
         <img src="static/car3.png">
       </div>
     </div>
+    <button class="slide-1">slide1</button>
+    <button class="slide-2">slide2</button>
+    <button class="slide-3">slide3</button>
  </div> 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
 <script>
 $('.slide-box').on('click', function() {
     $('.slide-container').css('transform', 'translateX(-100vw)');
+});
+$('.slide-1').on('click', function() {
+    $('.slide-container').css('transform', 'translateX(0vw)');
+});
+$('.slide-2').on('click', function() {
+    $('.slide-container').css('transform', 'translateX(-100vw)');
+});
+$('.slide-3').on('click', function() {
+    $('.slide-container').css('transform', 'translateX(-200vw)');
 });
 </script>
 
