@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <button class="btn btn-danger" id="more">더보기</button>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    $("#more").click(function () {
+      $.get("https://codingapple1.github.io/js/more1.json").done((data) => {
+        console.log(data);
+      });
+    });
+  </script>
   <script>
     var 출석부 = ["흥민", "영희", "철수", "재석"];
 
@@ -18,5 +35,25 @@
       }
     }
     이름찾기("철수");
+
+    function 함수(arr, b) {
+      var result = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        result = result + arr[i];
+      }
+
+      if (result / arr.length < b) {
+        console.log("올랐네요");
+      } else {
+        console.log("같거나 떨어졌네요 재수추천");
+      }
+    }
+
+    함수([2, 3, 4], 10); //올랐네요 출력될듯
+
+    $.get("https://codingapple1.github.io/hello.txt").done(function (data) {
+      console.log(data);
+    });
   </script>
 </html>
